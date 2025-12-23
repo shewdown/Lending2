@@ -11,6 +11,7 @@
     .split-layout { grid-template-columns: 1fr; }
     .atmosphere-gallery { grid-template-columns: 1fr; }
     section { padding: 50px 0; }
+    header.hero { padding: 30px 0; }
 }
 
 /* ---------- 1440px и ниже (ноутбуки) ---------- */
