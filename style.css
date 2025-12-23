@@ -1,0 +1,373 @@
+/* --- 1. Глобальные настройки (CSS Reset & Variables) --- */
+:root {
+    --color-bg: #F9F8F6; /* Светлый беж */
+    --color-text: #2C2C2C; /* Темный графит */
+    --color-accent: #C5A059; /* Золото/Бронза */
+    --color-accent-hover: #A68545;
+    --color-white: #ffffff;
+    --font-heading: 'Tilda Sans', sans-serif; /* [citation:1] */
+    --font-body: 'Tilda Sans', sans-serif; /* [citation:1] */
+    --spacing-unit: 80px;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: var(--font-body);
+    background-color: var(--color-bg);
+    color: var(--color-text);
+    line-height: 1.6;
+    font-size: 18px;
+}
+
+h1, h2, h3, h4 {
+    font-family: var(--font-heading);
+    font-weight: 700;
+    margin-bottom: 20px;
+    line-height: 1.2;
+}
+
+h2 {
+    font-size: 2.5rem;
+    text-align: center;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+    color: var(--color-text);
+}
+
+p {
+    margin-bottom: 20px;
+    font-weight: 300;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.btn {
+    display: inline-block;
+    background-color: var(--color-accent);
+    color: var(--color-white);
+    padding: 18px 40px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    text-decoration: none;
+    font-weight: 700;
+    border-radius: 5px;
+    transition: background 0.3s ease;
+    cursor: pointer;
+    border: none;
+    font-size: 16px;
+}
+
+.btn:hover {
+    background-color: var(--color-accent-hover);
+}
+
+section {
+    padding: var(--spacing-unit) 0;
+}
+
+/* --- 2. Блок 1: Hero Section --- */
+.hero {
+    position: relative;
+    height: 100vh;
+    min-height: 700px;
+    display: flex;
+    align-items: center;
+    background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.6)), url('https://images.unsplash.com/photo-1560750588-73207b1ef5b8?ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80');
+    background-size: cover;
+    background-position: center top;
+    color: var(--color-white);
+}
+
+.hero-content {
+    max-width: 1000px;
+}
+
+.hero h1 {
+    font-size: 3.5rem;
+    margin-bottom: 25px;
+}
+
+.hero-subtitle {
+    font-size: 1.2rem;
+    margin-bottom: 40px;
+    opacity: 0.9;
+}
+
+.hero-benefits {
+    display: flex;
+    gap: 30px;
+    margin-bottom: 40px;
+    flex-wrap: wrap;
+}
+
+.benefit-item {
+    flex: 1;
+    min-width: 200px;
+    background: rgba(255,255,255,0.1);
+    backdrop-filter: blur(5px);
+    padding: 15px;
+    border-left: 2px solid var(--color-accent);
+    border-radius: 10px;
+}
+
+.benefit-item h4 {
+    font-size: 1rem;
+    margin-bottom: 5px;
+    color: white;
+}
+
+.benefit-item p {
+    font-size: 0.9rem;
+    margin-bottom: 0;
+    line-height: 1.4;
+    color: rgba(255, 255, 255, 0.9);
+}
+
+.hero-cta-wrapper {
+    margin-top: 30px;
+}
+
+.micro-copy {
+    font-size: 0.9rem;
+    margin-bottom: 10px;
+    color: #eee;
+    font-style: italic;
+}
+
+/* --- 3. Блок 2: Консьерж --- */
+.concierge {
+    background: var(--color-white);
+}
+
+.split-layout {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+    align-items: center;
+}
+
+.concierge-img img {
+    width: 100%;
+    height: auto;
+    border-radius: 4px;
+}
+
+/* --- 4. Блок 3: До / После --- */
+.cases-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    margin-top: 50px;
+}
+
+.case-card {
+    background: var(--color-white);
+    padding: 20px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+    border-radius: 5px;
+}
+
+.case-images {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.case-images img {
+    width: 50%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 3px;
+}
+
+.case-meta {
+    font-family: var(--font-heading);
+    color: var(--color-accent);
+    font-style: italic;
+    margin-bottom: 10px;
+    display: block;
+}
+
+/* --- 5. Блок 4: Мастера --- */
+.team-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 40px;
+    margin-top: 60px;
+}
+
+.team-card {
+    text-align: center;
+}
+
+.team-card img {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 20px;
+    border: 3px solid var(--color-accent);
+}
+
+.team-role {
+    color: #777;
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 10px;
+    display: block;
+}
+
+/* --- 6. Блок 5: Атмосфера --- */
+.atmosphere {
+    background: #2C2C2C;
+    color: var(--color-white);
+    text-align: center;
+}
+
+.atmosphere h2 {
+    color: var(--color-white);
+}
+
+.atmosphere-gallery {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    margin-top: 40px;
+}
+
+.atmosphere-gallery img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    opacity: 0.8;
+    transition: opacity 0.3s;
+    border-radius: 3px;
+}
+.atmosphere-gallery img:hover { opacity: 1; }
+
+/* --- 7. Блок 6: Пакеты --- */
+.pricing-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    margin-top: 50px;
+}
+
+.price-card {
+    background: var(--color-white);
+    padding: 40px;
+    border: 1px solid #e0e0e0;
+    position: relative;
+    transition: transform 0.3s;
+}
+
+.price-card:hover {
+    transform: translateY(-5px);
+    border-color: var(--color-accent);
+}
+
+.price-title {
+    font-family: var(--font-heading);
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+.price-save {
+    background: var(--color-accent);
+    color: white;
+    padding: 5px 10px;
+    font-size: 0.8rem;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+}
+
+.price-list {
+    list-style: none;
+    margin: 20px 0;
+}
+
+.price-list li {
+    margin-bottom: 10px;
+    padding-left: 20px;
+    position: relative;
+}
+.price-list li::before {
+    content: "•";
+    color: var(--color-accent);
+    position: absolute;
+    left: 0;
+}
+
+/* --- 8. Блок 7: Нет времени --- */
+.express-section {
+    background: #F2EFE9;
+}
+
+.express-features {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    margin-top: 40px;
+    text-align: center;
+}
+
+.express-item {
+    flex: 1;
+    min-width: 250px;
+    padding: 20px;
+}
+
+.express-icon {
+    font-size: 2rem;
+    margin-bottom: 15px;
+    display: block;
+}
+
+/* --- 9. Блок 8: Footer CTA --- */
+.footer-cta {
+    background: linear-gradient(45deg, #1a1a1a, #2c2c2c);
+    color: white;
+    text-align: center;
+    padding: 100px 20px 60px;
+}
+
+.footer-cta h2 { color: white; }
+
+.guarantee-box {
+    border: 1px solid var(--color-accent);
+    padding: 20px;
+    max-width: 600px;
+    margin: 30px auto;
+    border-radius: 4px;
+}
+
+.reviews {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 40px;
+    flex-wrap: wrap;
+}
+
+.review-badge {
+    background: rgba(255,255,255,0.1);
+    padding: 10px 20px;
+    border-radius: 20px;
+    font-size: 0.9rem;
+}

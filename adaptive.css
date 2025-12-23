@@ -1,0 +1,258 @@
+/* ================================
+   ADAPTIVE.CSS
+   Полная адаптация под все устройства
+   ================================ */
+
+/* --- Mobile Responsiveness --- */
+@media (max-width: 768px) {
+    h1 { font-size: 2.5rem; }
+    h2 { font-size: 1.8rem; }
+    .hero-benefits { flex-direction: column; gap: 15px; }
+    .split-layout { grid-template-columns: 1fr; }
+    .atmosphere-gallery { grid-template-columns: 1fr; }
+    section { padding: 50px 0; }
+}
+
+/* ---------- 1440px и ниже (ноутбуки) ---------- */
+@media (max-width: 1440px) {
+    .container {
+        max-width: 1100px;
+    }
+
+    .hero h1 {
+        font-size: 3.2rem;
+    }
+}
+
+/* ---------- 1200px и ниже (малые ноутбуки) ---------- */
+@media (max-width: 1200px) {
+    .container {
+        max-width: 1000px;
+    }
+
+    .hero-content {
+        max-width: 900px;
+    }
+
+    .hero-benefits {
+        gap: 20px;
+    }
+
+    .benefit-item {
+        padding: 12px;
+    }
+}
+
+/* ---------- 1024px и ниже (планшеты горизонтально) ---------- */
+@media (max-width: 1024px) {
+    body {
+        font-size: 17px;
+    }
+
+    .hero {
+        min-height: 600px;
+    }
+
+    .hero h1 {
+        font-size: 2.8rem;
+    }
+
+    .hero-subtitle {
+        font-size: 1.1rem;
+    }
+
+    .cases-grid,
+    .pricing-grid {
+        gap: 25px;
+    }
+
+    .team-grid {
+        gap: 30px;
+    }
+
+    .atmosphere-gallery img {
+        height: 260px;
+    }
+}
+
+/* ---------- 900px и ниже (планшеты) ---------- */
+@media (max-width: 900px) {
+    .hero-benefits {
+        flex-direction: column;
+    }
+
+    .hero-content {
+        max-width: 100%;
+    }
+
+    .express-features {
+        gap: 20px;
+    }
+}
+
+/* ---------- 768px и ниже (крупные телефоны / планшеты вертикально) ---------- */
+@media (max-width: 768px) {
+    body {
+        font-size: 16px;
+    }
+
+    section {
+        padding: 50px 0;
+    }
+
+    h2 {
+        font-size: 1.8rem;
+    }
+
+    .hero {
+        height: auto;
+        padding: 100px 0;
+        text-align: center;
+    }
+
+    .hero h1 {
+        font-size: 2.4rem;
+    }
+
+    .hero-subtitle {
+        font-size: 1rem;
+    }
+
+    .hero-cta-wrapper {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .btn {
+        width: 100%;
+        max-width: 320px;
+        text-align: center;
+    }
+
+    .split-layout {
+        gap: 40px;
+    }
+
+    .case-images img {
+        height: 180px;
+    }
+
+    .team-card img {
+        width: 160px;
+        height: 160px;
+    }
+
+    .atmosphere-gallery {
+        grid-template-columns: 1fr;
+    }
+
+    .atmosphere-gallery img {
+        height: 240px;
+    }
+
+    .reviews {
+        gap: 10px;
+    }
+}
+
+/* ---------- 600px и ниже (телефоны) ---------- */
+@media (max-width: 600px) {
+    h1 {
+        font-size: 2rem;
+    }
+
+    h2 {
+        font-size: 1.6rem;
+    }
+
+    .hero {
+        padding: 80px 0;
+    }
+
+    .hero-benefits {
+        margin-bottom: 30px;
+    }
+
+    .benefit-item {
+        border-radius: 6px;
+    }
+
+    .case-card {
+        padding: 15px;
+    }
+
+    .case-images {
+        flex-direction: column;
+    }
+
+    .case-images img {
+        width: 100%;
+        height: 200px;
+    }
+
+    .price-card {
+        padding: 30px 20px;
+    }
+
+    .express-item {
+        min-width: 100%;
+    }
+
+    .footer-cta {
+        padding: 80px 20px 50px;
+    }
+
+    form {
+        width: 100%;
+    }
+}
+
+/* ---------- 420px и ниже (малые телефоны) ---------- */
+@media (max-width: 420px) {
+    body {
+        font-size: 15px;
+    }
+
+    h1 {
+        font-size: 1.8rem;
+    }
+
+    .hero-subtitle {
+        font-size: 0.95rem;
+    }
+
+    .micro-copy {
+        font-size: 0.8rem;
+    }
+
+    .btn {
+        padding: 15px 20px;
+        font-size: 14px;
+    }
+
+    .team-card img {
+        width: 140px;
+        height: 140px;
+    }
+
+    .review-badge {
+        font-size: 0.8rem;
+        padding: 8px 14px;
+    }
+}
+
+/* ---------- Ultra-wide экраны (1600px+) ---------- */
+@media (min-width: 1600px) {
+    .container {
+        max-width: 1300px;
+    }
+
+    .hero h1 {
+        font-size: 3.8rem;
+    }
+
+    .hero-subtitle {
+        font-size: 1.3rem;
+    }
+}
