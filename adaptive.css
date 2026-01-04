@@ -106,7 +106,6 @@
     }
 
     .hero {
-        height: auto;
         padding: 100px 0;
         text-align: center;
     }
@@ -198,10 +197,6 @@
 
     .express-item {
         min-width: 100%;
-    }
-
-    .footer-cta {
-        padding: 80px 20px 50px;
     }
 
     form {
